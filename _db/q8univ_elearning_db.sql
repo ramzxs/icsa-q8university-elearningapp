@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2023 at 10:47 AM
+-- Generation Time: Sep 15, 2023 at 11:01 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -61,9 +61,9 @@ CREATE TABLE `course_material` (
 --
 
 INSERT INTO `course_material` (`cmID`, `cmCourse`, `cmTitle`, `cmFiles`) VALUES
-(1001, 'UKITL4', 'Introduction to IT', 'intro.docx|intro.pdf'),
-(1002, 'UKITL4', 'Lesson 1', 'lesson1.ppt|lesson1.pdf'),
-(1003, 'JAVA', 'Lesson 2', 'l2.pdf');
+(1001, 'UKITL4', 'Introduction to IT', 'IT_PDFFile.pdf'),
+(1002, 'UKITL4', 'Lesson 1', 'UKITL4_Lesson1.docx|UKITL4_Lesson1.pdf'),
+(1003, 'JAVA', 'Lesson 2', 'JAVA_Lesson1.docx');
 
 -- --------------------------------------------------------
 

@@ -18,11 +18,11 @@ require_once 'libs/main.php';
 
         <p>Welcome, <b><?= $_SESSION['USER'] ?></b>! Here are your courses:</p>
 
-        <table border="1" cellpadding="5" cellspacing="0">
+        <table border="1" cellpadding="5" cellspacing="0" width="100%">
             <tr>
                 <td>#</td>
-                <td>COURSE CODE</td>
                 <td>COURSE TITLE</td>
+                <td>COURSE DESCRIPTION</td>
             </tr>
             <?php
             $DB = connectDatabase();
@@ -39,7 +39,7 @@ require_once 'libs/main.php';
                         <a href="?course=<?= $row['crsID'] ?>"><?= $row['crsTitle'] ?></a>
                     </td>
                     <td>
-                        <?= $row['crsDescription'] ?>
+                        <?= str_replace("\r", "<br>", $row['crsDescription']) ?>
                     </td>
                 </tr>
                 <?php
@@ -74,7 +74,8 @@ require_once 'libs/main.php';
                             <?php
                             $cms = explode("|", trim($row['cmFiles']));
                             for ($j = 0; $j < count($cms); $j++) { ?>
-                                <a href="<?= $cms[$j] ?>"><?= $cms[$j] ?></a>
+                                <a href="materials/<?= $cms[$j] ?>"
+                                    target="_blank"><?= $cms[$j] ?></a><br>
                                 <?php
                             }
                             ?>

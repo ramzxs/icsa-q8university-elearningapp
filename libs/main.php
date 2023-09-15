@@ -11,7 +11,9 @@ function printHeader($title) {
     </head>
     <body>
     <header>
-        <strong>Q8 University - eLearning Platform</strong>
+        <div style="padding: 10px; background-color: darkgreen; font-size: 32pt">
+            Q8 University - eLearning Platform
+        </div>
         <br>
         <nav>
             <a href=".">Home</a>

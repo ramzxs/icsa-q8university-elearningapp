@@ -17,10 +17,10 @@ function printHeader($title) {
         <br>
         <nav>
             <a href=".">Home</a>
-            <a href="courses.php">Courses</a>
             <?php
             if (isset($_SESSION['USER'])) {
                 ?>
+                <a href="courses.php">My Courses</a>
                 <a href="login.php?OP=LOGOUT" onclick="return confirmLogout()">Logout</a>
                 <?php
             } else {

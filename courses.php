@@ -72,10 +72,18 @@ require_once 'libs/main.php';
                         <td><?= $row['cmTitle'] ?></td>
                         <td>
                             <?php
+                            // "UKITL4_Lesson1.docx|UKITL4_Lesson1.pdf"
                             $cms = explode("|", trim($row['cmFiles']));
-                            for ($j = 0; $j < count($cms); $j++) { ?>
-                                <a href="materials/<?= $cms[$j] ?>"
-                                    target="_blank"><?= $cms[$j] ?></a><br>
+                            for ($j = 0; $j < count($cms); $j++) {
+                                // $cms[0] = "UKITL4_Lesson1.docx"
+                                // $cms[1] = "UKITL4_Lesson1.pdf"
+                                $ext = substr($cms[$j], strpos($cms[$j], ".") + 1); ?>
+                                <a href="materials/<?= $cms[$j] ?>" target="_blank">
+                                    <img src="assets/icon_<?= $ext ?>.png"
+                                            height="32" alt="Icon" />
+                                    <?= $cms[$j] ?>
+                                </a>
+                                <br>
                                 <?php
                             }
                             ?>

@@ -103,7 +103,7 @@ CREATE TABLE `student` (
 
 --
 -- Dumping data for table `student`
---
+-- test and test2
 
 INSERT INTO `student` (`stdID`, `stdPassword`, `stdNameLast`, `stdNameFirst`, `stdNameMiddle`) VALUES
 ('2023-00000', '*94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29', 'Test', 'Student', '.'),

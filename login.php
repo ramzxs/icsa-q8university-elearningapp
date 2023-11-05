@@ -27,9 +27,9 @@ if (isset($_GET['OP']) && $_GET['OP'] == 'LOGOUT') {
             $stmt = $DB->query($sql);
             if ($row = $stmt->fetch()) {
                 $_SESSION['USER'] = $_POST['user'];
-                echo "Go to your dashboard.";
+                echo 'Go to your <a href="courses.php">dashboard</a>.';
             } else {
-                echo "User not found";
+                echo "Invalid credential or user not found";
             }
         } else { ?>
             <form action="?" method="post" onsubmit="return formProcess()">
